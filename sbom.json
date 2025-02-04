@@ -1,0 +1,88 @@
+{
+    "bomFormat": "CycloneDX",
+    "specVersion": "1.4",
+    "version": 1,
+    "metadata": {
+      "timestamp": "2025-02-02T16:00:00Z",
+      "tools": [
+        {
+          "vendor": "Flight Booking Software Team",
+          "name": "SBOM Generator"
+        }
+      ],
+      "component": {
+        "type": "application",
+        "name": "Flight Booking Platform",
+        "version": "1.0.0"
+      }
+    },
+    "components": [
+      {
+        "type": "library",
+        "name": "react",
+        "version": "18.2.0",
+        "group": "frontend",
+        "licenses": [{"id": "MIT"}]
+      },
+      {
+        "type": "library", 
+        "name": "react-router-dom",
+        "version": "6.15.0",
+        "group": "frontend",
+        "licenses": [{"id": "MIT"}]
+      },
+      {
+        "type": "library",
+        "name": "axios",
+        "version": "1.4.0",
+        "group": "frontend",
+        "licenses": [{"id": "MIT"}]
+      },
+      {
+        "type": "library",
+        "name": "express",
+        "version": "4.18.2",
+        "group": "backend",
+        "licenses": [{"id": "MIT"}]
+      },
+      {
+        "type": "library",
+        "name": "mongoose",
+        "version": "7.3.1",
+        "group": "backend",
+        "licenses": [{"id": "MIT"}]
+      },
+      {
+        "type": "library",
+        "name": "jsonwebtoken",
+        "version": "9.0.1",
+        "group": "backend",
+        "licenses": [{"id": "MIT"}]
+      },
+      {
+        "type": "library",
+        "name": "amadeus",
+        "version": "2.0.0",
+        "group": "api-integration",
+        "licenses": [{"id": "MIT"}]
+      },
+      {
+        "type": "library", 
+        "name": "sabre-dev-studio",
+        "version": "1.5.0",
+        "group": "api-integration",
+        "licenses": [{"id": "Apache-2.0"}]
+      }
+    ],
+    "dependencies": [
+      {
+        "ref": "react",
+        "dependsOn": ["react-router-dom", "axios"]
+      },
+      {
+        "ref": "express",
+        "dependsOn": ["mongoose", "jsonwebtoken"]
+      }
+    ]
+  }
+  
